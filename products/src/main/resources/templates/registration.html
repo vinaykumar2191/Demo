@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+</head>
+<body>
+
+	<!-- <div th:include = "fragments/home :: home"></div> -->
+	<form action="#" th:action="@{/app/reg}" th:object="${users}" method="post">
+		<label>Enter Your Name :</label>
+		<input type = "text" th:field = "*{name}"/><br>
+		<label>Enter Your Email :</label>
+		<input type="email" th:field = "*{email}"/><br>
+		<label>Enter Your Password :</label>
+		<input type="password" th:field = "*{password}"/><br>
+		<label>Enter Your Mobile_No :</label>
+		<input type="tel" th:field = "*{mobile}"/><br>
+		
+		<button type="submit">Submit</button>
+		
+	</form>
+</body>
+</html>
